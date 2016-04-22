@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+require 'qcbr'
+require 'optparse'
+
+config = {
+  port: 50000,
+  dst: '225.0.0.0'
+}
+
+opts = OptionParser.new
+
+opts.on('-d DST', '--dst DST', 'destination address (default is 255.0.0.0)') { |i| config[dst] = i }
+opts.on('-p PORT', '--port PORT', 'port number to send packets (default is 50000)') { |i| config[port] = Integer(i) }
+
+opts.parse! ARGV
+
+while str = STDIN.gets
+  Qcbr.send str, config[:dst], config[:port]
+end
