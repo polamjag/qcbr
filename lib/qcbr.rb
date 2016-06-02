@@ -9,8 +9,8 @@ class Qcbr
   class << self
     def encode_text(text)
       [
-        text.encode('UTF-16LE').chars.map { |i|
-          i.unpack("H*").first.reverse.rjust(8, "0")
+        text.chars.map { |c|
+          c.ord.to_s(16).rjust(8, "0")
         }.flatten.join
       ].pack('h*')
     end
