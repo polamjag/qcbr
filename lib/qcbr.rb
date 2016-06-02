@@ -17,7 +17,7 @@ class Qcbr
 
     def send(text, dst_addr='225.0.0.0', port=50000)
       UDPSocket.new.send(
-        encode_text(text),
+        encode_text(text.split.join("\n")),
         0,
         dst_addr, port
       )
