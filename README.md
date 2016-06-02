@@ -1,5 +1,8 @@
 # Qcbr
 
+[![Gem Version](https://badge.fury.io/rb/qcbr.svg)](https://badge.fury.io/rb/qcbr)
+[![CircleCI](https://circleci.com/gh/polamjag/qcbr.svg?style=svg)](https://circleci.com/gh/polamjag/qcbr)
+
 Qcbr is a small utility to send texts to Quartz Composer's "Network Receiver" patch over UDP.
 
 ## Installation
