@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["polamjag"]
   spec.email         = ["s@polamjag.info"]
 
-  spec.summary       = %q{Qcbr is a small utility to send texts to Quartz Composer path over UDP}
-  spec.description   = %q{Qcbr is a small utility to send texts to Quartz Composer path over UDP}
+  spec.summary       = %q{Qcbr is a small utility to send texts to Quartz Composer over UDP}
+  spec.description   = %q{Qcbr is a small utility to send texts to Quartz Composer over UDP}
   spec.homepage      = "https://github.com/polamjag/qcbr"
   spec.license       = "MIT"
 
