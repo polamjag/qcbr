@@ -3,21 +3,11 @@
 [![Gem Version](https://badge.fury.io/rb/qcbr.svg)](https://badge.fury.io/rb/qcbr)
 [![CircleCI](https://circleci.com/gh/polamjag/qcbr.svg?style=svg)](https://circleci.com/gh/polamjag/qcbr)
 
-Qcbr is a small utility to send texts to Quartz Composer's "Network Receiver" patch over UDP.
+Qcbr is a small utility to send texts to [Quartz Composer](https://developer.apple.com/library/mac/documentation/GraphicsImaging/Conceptual/QuartzComposerUserGuide/qc_intro/qc_intro.html)'s "Network Receiver" patch over UDP.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'qcbr'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+Just execute
 
     $ gem install qcbr
 
@@ -27,6 +17,15 @@ Or install it yourself as:
 
 ```
 $ some-command-to-output-text | qcbr
+```
+
+Optionally you can use its API within your Ruby code:
+
+```ruby
+require 'qcbr'
+
+Qcbr.encode_text 'foo' # just encodes to Network Receiver's format
+Qcbr.send 'bar', '225.0.0.0', 50000
 ```
 
 ## Development
